@@ -8,7 +8,7 @@ import type { AppData } from '../domain/types';
  * Une copie de secours « previous » est gardée à chaque écriture.
  */
 
-const store = typeof indexedDB !== 'undefined' ? createStore('money-quest', 'kv') : undefined;
+const store = typeof indexedDB !== 'undefined' ? createStore('money-quest-perso', 'kv') : undefined;
 const KEY = 'data';
 const PREV = 'data-previous';
 

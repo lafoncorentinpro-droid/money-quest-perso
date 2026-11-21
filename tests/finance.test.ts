@@ -374,7 +374,7 @@ describe('migration v2 : mois du 1er au dernier jour', () => {
     const d = migrate({ schemaVersion: 1, settings: { monthStartDay: 25, currency: 'EUR', theme: 'auto' } }) as { schemaVersion: number; settings: { monthStartDay: number; currency: string; theme: string } };
     expect(d.settings.theme).toBe('clair');
     expect((migrate({ schemaVersion: 1, settings: { theme: 'sombre' } }) as { settings: { theme: string } }).settings.theme).toBe('sombre');
-    expect(d.schemaVersion).toBe(3);
+    expect(d.schemaVersion).toBe(5);
     expect(d.settings.monthStartDay).toBe(1);
     expect(d.settings.currency).toBe('EUR');
   });

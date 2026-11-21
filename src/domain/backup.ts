@@ -38,6 +38,10 @@ export type ValidationResult = { ok: true; data: AppData; summary: BackupSummary
 
 /** Migrations de schéma : chaque version ajoute une étape. */
 const MIGRATIONS: Record<number, (d: Record<string, unknown>) => Record<string, unknown>> = {
+  // 3 -> 4 -> 5 : versions de l'app « enveloppes » (de ta copine). Rien à convertir ici :
+  // ces numéros servent seulement à pouvoir importer ses sauvegardes et les tiennes faites là-bas.
+  3: (d) => d,
+  4: (d) => d,
   // 1 -> 2 : le mois va toujours du 1er au dernier jour
   // + thème clair par défaut (l'ancien « auto » devient « clair »)
   1: (d) => {

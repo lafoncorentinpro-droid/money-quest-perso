@@ -1,7 +1,7 @@
 import { DEFAULT_ACTIVE_MISSIONS, DEFAULT_XP_RULES } from './game';
 import type { AppData, Category, IncomeType } from './types';
 
-export const SCHEMA_VERSION = 3;
+export const SCHEMA_VERSION = 5;
 
 export const DEFAULT_CATEGORIES: Category[] = [
   ['logement', 'Logement', '🏠'],

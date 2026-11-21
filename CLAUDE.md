@@ -1,4 +1,7 @@
-# MONEY QUEST — fiche projet pour Claude
+# MONEY QUEST (version PERSO de Corentin) — fiche projet pour Claude
+
+> ⚠️ Ce dossier est la version **personnelle** (avant la méthode des enveloppes). La version de sa copine (enveloppes) est dans le dossier voisin `money-quest`, publiée sur https://lafoncorentinpro-droid.github.io/money-quest/ — ne jamais la modifier depuis ici.
+> Données locales rangées sous le nom `money-quest-perso` (séparées de l'autre app). SCHEMA_VERSION 5 pour pouvoir importer les sauvegardes de l'autre version.
 
 PWA de budget/épargne « cozy fantasy » (renard aventurier), en français, euros, iPhone d'abord.
 Données 100 % locales (IndexedDB), aucun serveur. Utilisateur : non-développeur, iPhone 13 mini.
@@ -22,7 +25,7 @@ Windows + Git Bash. **Pas de Python** : scripts en Node. `gh` connecté (compte 
 
 ## Publication (automatique)
 `git push` sur `main` → GitHub Actions (`.github/workflows/deploy.yml`) : tests + build → GitHub Pages.
-URL : https://lafoncorentinpro-droid.github.io/money-quest/ — l'app installée se met à jour seule.
+URL : https://lafoncorentinpro-droid.github.io/money-quest-perso/ — l'app installée se met à jour seule.
 - Toujours `npm test` avant de pousser. Commits en français, finissant par la ligne Co-Authored-By.
 - **Ne jamais changer l'icône ni le nom de l'app sans prévenir** : sur iPhone ils ne se mettent à jour qu'en réinstallant (et réinstaller efface les données locales → export/import de sauvegarde).
 - Ne jamais renommer le dépôt (l'URL, donc les données de l'utilisateur, en dépendent).

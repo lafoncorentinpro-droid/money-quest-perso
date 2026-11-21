@@ -60,7 +60,7 @@ export function Profile() {
 
   const exportJson = async () => {
     const stamp = new Date().toISOString().slice(0, 10);
-    await shareOrDownload(`money-quest-sauvegarde-${stamp}.json`, JSON.stringify(makeBackup(data), null, 2), 'application/json');
+    await shareOrDownload(`money-quest-perso-sauvegarde-${stamp}.json`, JSON.stringify(makeBackup(data), null, 2), 'application/json');
     set({ lastBackupAt: new Date().toISOString() });
     toast('Sauvegarde exportée', 'success');
   };
