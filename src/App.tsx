@@ -27,8 +27,14 @@ const TABS = [
 
 /** Barre du bas : Accueil · bouton + au centre · Mon Argent (maquettes). */
 function TabBar({ current, onAdd }: { current: string; onAdd: () => void }) {
+  const { period, setMonth } = useStore();
   const tab =(t: (typeof TABS)[number]) => (
-    <a key={t.id} href={`#/${t.id}`} className="tab" aria-current={current === t.id ? 'page' : undefined}>
+    <a
+      key={t.id}
+      href={`#/${t.id}`}
+      className="tab"
+      onClick={t.id === 'accueil' ? () => setMonth(period) : undefined}
+      aria-current={current === t.id ? 'page' : undefined}>
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
         {t.icon}
       </svg>
